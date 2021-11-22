@@ -1,0 +1,42 @@
+<section class="cadastro container margem-topo">
+    <form #formLogin="ngForm" (ngSubmit)="onSubmitLogin()">
+        <div>
+            <h2>Já tenho uma conta!</h2>
+            <p class="margem-topo">
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" name="email" [(ngModel)]="usuarioModel.email" />
+            </p>
+            <p class="margem-topo">
+                <label for="senha">Senha</label><br>
+                <input type="password" id="senha" name="senha" [(ngModel)]="usuarioModel.senha" />
+            </p>
+            <div class="margem-topo cadastro-lembrar">
+                <div class="oculto-pp">
+                    <label class="check-titulo">
+                        Manter-me conectado
+                        <input type="checkbox">
+                        <span class="check-controle"></span>
+                    </label>
+                </div>
+                <div>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+            </div>
+            <button class="margem-topo" type="submit">Entrar</button>
+        </div>
+    </form>
+    <form #formCadastro="ngForm" (ngSubmit)="onSubmitCadastro()">
+        <div>
+            <h2>Quero me cadastrar</h2>
+            <p class="margem-topo">
+                <label for="nome">Nome completo</label><br>
+                <input type="text" id="nome" name="nome" [(ngModel)]="usuarioModel.nome" />
+            </p>
+            <p class="margem-topo">
+                <label for="email2">E-mail</label><br>
+                <input type="email" id="email2" name="email2" [(ngModel)]="usuarioModel.email" />
+            </p>
+            <button class="margem-topo" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</section>

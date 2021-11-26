@@ -1,60 +1,65 @@
 {
-    "usuarios": [
-        {
-            "nome": "João da Silva",
-            "email": "joao@email.com",
-            "senha": "senha123",
-            "id": 1
-        },
-        {
-            "nome": "Pedro da Silva",
-            "email": "pedro@email.com",
-            "senha": "senha456",
-            "id": 2
-        },
-        {
-            "nome": "Adriana da Silva",
-            "email": "adriana@email.com",
-            "senha": "senha789",
-            "id": 3
-        }
-    ],
-    "produtos": [
-        {
-            "titulo": "Fones de ouvido Beats Solo3 Wireless Rose Gold", 
-            "preco": "R$ 1599", 
-            "imagem": "assets/beats.jpg", 
-            "id": 1
-        },
-        {
-            "titulo": "iPhone 12", 
-            "preco": "R$ 7000", 
-            "imagem": "assets/iphone.jpg", 
-            "id": 2
-        }, 
-        {
-            "titulo": "iPhone 13 Rosa", 
-            "preco": "R$ 7600", 
-            "imagem": "assets/iphone13rosa.jpg", 
-            "id": 3
-        }, 
-        {
-            "titulo": "Apple Watch Series 7", 
-            "preco": "R$ 5300", 
-            "imagem": "assets/apple-watch.jpg", 
-            "id": 4
-        }, 
-        {
-            "titulo": "Cogumelo do Mario colecionável", 
-            "preco": "R$ 50", 
-            "imagem": "assets/cogumelo-mario.jpg", 
-            "id": 5
-        }, 
-        {
-            "titulo": "Novo iMac de 24 polegadas com chip M1 da Apple", 
-            "preco": "R$ 17600", 
-            "imagem": "assets/imac-rosa.jpg", 
-            "id": 6
-        }
-    ]
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$xikkO.o05yeTgZ8qjwkzK.w9qTkkPKrWvuN/cLSReZiN3XWAJMj9O",
+      "id": 1
+    },
+    {
+      "email": "vanessa@mail.com",
+      "password": "$2a$10$bVA78doPrUZtluSk5SfDMu7Lv7o0P6TFQGoXJ49FYmw/HEHSRV.ka",
+      "name": "Vanessa Ortega",
+      "id": 2
+    },
+    {
+      "email": "teste@mail.com",
+      "password": "$2a$10$EHsf3ZWUc8oP/wI4eNSakuhkzcGIeyLYJcIqvoK7phlR4vjJjMc..",
+      "name": "Teste dos Santos",
+      "id": 3
+    },
+    {
+      "email": "testelima@mail.com",
+      "password": "$2a$10$Fa0f.X2Z/Hick6sEeeqCH.Q2P25szb06YbruaTNF1QX0/rAH8uELy",
+      "name": "Teste dos Santos Lima",
+      "id": 4
+    }
+  ],
+  "produtos": [
+    {
+      "titulo": "Fones de ouvido Beats Solo3 Wireless Rose Gold",
+      "preco": "R$ 1599",
+      "imagem": "assets/beats.jpg",
+      "id": 1
+    },
+    {
+      "titulo": "iPhone 12",
+      "preco": "R$ 7000",
+      "imagem": "assets/iphone.jpg",
+      "id": 2
+    },
+    {
+      "titulo": "iPhone 13 Rosa",
+      "preco": "R$ 7600",
+      "imagem": "assets/iphone13rosa.jpg",
+      "id": 3
+    },
+    {
+      "titulo": "Apple Watch Series 7",
+      "preco": "R$ 5300",
+      "imagem": "assets/apple-watch.jpg",
+      "id": 4
+    },
+    {
+      "titulo": "Cogumelo do Mario colecionável",
+      "preco": "R$ 50",
+      "imagem": "assets/cogumelo-mario.jpg",
+      "id": 5
+    },
+    {
+      "titulo": "Novo iMac de 24 polegadas com chip M1 da Apple",
+      "preco": "R$ 17600",
+      "imagem": "assets/imac-rosa.jpg",
+      "id": 6
+    }
+  ]
 }

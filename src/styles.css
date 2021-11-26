@@ -87,6 +87,10 @@ textarea {
     --fa-secondary-color: #5acfda;
 }
 
+.erro {
+    color: red;
+}
+
 /* A partir daqui: ajustes responsivos */
 @media screen and (min-width: 992px) {
     .oculto-gg {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
     selector: 'app-minha-conta',
@@ -8,18 +10,29 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class MinhaContaComponent implements OnInit {
 
-    constructor() { }
+    constructor(private router: Router, private usuarioService: UsuarioService) { }
 
     ngOnInit(): void {
     }
 
-    usuarioModel = new Usuario("", "", "")
+    usuarioLogin = new Usuario();
+    usuarioCadastro = new Usuario();
+    mensagemLogin = "";
+    mensagemCadastro = "";
 
     onSubmitLogin(): void {
-        console.log(this.usuarioModel)
+        this.usuarioService.logar(this.usuarioLogin).subscribe( (response) => {
+            this.router.navigateByUrl("/");
+        }, (error) => {
+            this.mensagemLogin = error.error;
+        } )
     }
 
     onSubmitCadastro(): void {
-        console.log(this.usuarioModel)
+        this.usuarioService.cadastrar(this.usuarioCadastro).subscribe( (response) => {
+            this.mensagemCadastro = "Cadastro efetuado com sucesso! Efetue seu login ao lado.";
+        }, (error) => {
+            this.mensagemCadastro = error.error;
+        } )
     }
 }

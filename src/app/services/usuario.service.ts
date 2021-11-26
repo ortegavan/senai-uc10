@@ -8,12 +8,21 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioService {
 
-    url = "http://localhost:3000/usuarios";
-    httpOptions = { headers: new HttpHeaders({ "Content-Type": "application/json" }) }
+    url = "http://localhost:3000/";
 
     constructor(private httpClient: HttpClient) { }
 
-    getUsuarios(): Observable<Usuario[]> {
-        return this.httpClient.get<Usuario[]>(this.url)
-    }
+    logar(usuario: Usuario): Observable<any> {
+        return this.httpClient.post(this.url + "login", JSON.stringify(usuario), {
+            headers: new HttpHeaders({ 'Content-Type': 'application/json' }), 
+            observe: "response"
+        })
+    } 
+
+    cadastrar(usuario: Usuario): Observable<any> {
+        return this.httpClient.post(this.url + "register", JSON.stringify(usuario), {
+            headers: new HttpHeaders({ 'Content-Type': 'application/json' }), 
+            observe: "response"
+        })
+    } 
 }

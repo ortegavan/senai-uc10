@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +12,7 @@ import { BannerComponent } from './views/banner/banner.component';
 import { BeneficiosComponent } from './views/beneficios/beneficios.component';
 import { ProdutosComponent } from './views/produtos/produtos.component';
 import { FooterComponent } from './views/footer/footer.component';
-import { FormsModule } from '@angular/forms';
 import { MinhaContaComponent } from './views/minha-conta/minha-conta.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

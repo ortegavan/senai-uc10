@@ -20,19 +20,36 @@ export class MinhaContaComponent implements OnInit {
     mensagemLogin = "";
     mensagemCadastro = "";
 
+    blocklist: string[] = ["select ", "from ", "drop ", "or ", "having ", "group ", "by ", "insert ", "exec ", "\"", "\'", ";", "--"]
+
     onSubmitLogin(): void {
-        this.usuarioService.logar(this.usuarioLogin).subscribe( (response) => {
+        this.blocklist.forEach(palavra => {
+            if (this.usuarioLogin.email.toLowerCase().includes(palavra)) {
+                this.mensagemLogin = "Dados inválidos.";
+                return;
+            }
+        })
+
+        this.usuarioService.logar(this.usuarioLogin).subscribe((response) => {
             this.router.navigateByUrl("/");
         }, (error) => {
             this.mensagemLogin = error.error;
-        } )
+        })
     }
 
     onSubmitCadastro(): void {
-        this.usuarioService.cadastrar(this.usuarioCadastro).subscribe( (response) => {
+        this.blocklist.forEach(palavra => {
+            if (this.usuarioCadastro.email.toLowerCase().includes(palavra) ||
+                this.usuarioCadastro.name.toLowerCase().includes(palavra)) {
+                this.mensagemCadastro = "Dados inválidos.";
+                return;
+            }
+        })
+
+        this.usuarioService.cadastrar(this.usuarioCadastro).subscribe((response) => {
             this.mensagemCadastro = "Cadastro efetuado com sucesso! Efetue seu login ao lado.";
         }, (error) => {
             this.mensagemCadastro = error.error;
-        } )
+        })
     }
 }

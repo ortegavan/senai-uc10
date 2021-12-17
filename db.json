@@ -22,6 +22,12 @@
       "password": "$2a$10$Fa0f.X2Z/Hick6sEeeqCH.Q2P25szb06YbruaTNF1QX0/rAH8uELy",
       "name": "Teste dos Santos Lima",
       "id": 4
+    },
+    {
+      "email": "digu@digu.com",
+      "password": "$2a$10$4olsY68d.vNPMsY.wAnYi.TsiIJI8BJ9JQlfM.D00YyeJ.MOjQsQS",
+      "name": "Digu Digu",
+      "id": 5
     }
   ],
   "produtos": [

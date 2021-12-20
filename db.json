@@ -1,12 +1,5 @@
 {
-  "users": [
-    {
-      "email": "vanessa@email.com",
-      "password": "$2a$10$v9X33NYy0sT3HQzzYhyGsubhYZurkS/WCQ7niHnhyoWipbDWIHaHO",
-      "name": "Vanessa Ortega",
-      "id": 1
-    }
-  ],
+  "users": [],
   "produtos": [
     {
       "titulo": "Fones de ouvido Beats Solo3 Wireless Rose Gold",
